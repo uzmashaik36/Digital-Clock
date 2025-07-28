@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: linear-gradient(135deg, #a18cd1, #fbc2eb);
+  color: #fff;
+  text-align: center;
+  transition: background 0.5s ease;
+}
+
+.container {
+  margin-top: 10vh;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  animation: fadeIn 1s ease-in-out;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.date {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: #f1f1f1;
+}
+
+.clock {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  transition: all 0.3s ease-in-out;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background: #fff;
+  color: #333;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s;
+}
+
+button:hover {
+  background: #f1f1f1;
+  transform: scale(1.05);
+}
+
+footer {
+  padding: 1rem;
+  font-size: 0.9rem;
+  background: rgba(0, 0, 0, 0.1);
+  color: #fff;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .clock {
+    font-size: 2.2rem;
+  }
+
+  .container {
+    padding: 1.5rem;
+  }
+}
